@@ -66,6 +66,10 @@ Differences between consecutive 30-second epochs:
 
 ```
 project4-pseudorange-vs-carrier-phase/
+├── Outputs/
+│   ├── plot1_pseudorange_vs_carrier_phase.png
+│   ├── plot2_noise_comparison.png
+│   └── plot3_code_minus_phase.png
 ├── project4_pseudorange_vs_carrier_phase.ipynb   ← Main notebook
 ├── requirements.txt                               ← Python dependencies
 ├── LICENSE                                        ← MIT License
