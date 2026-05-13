@@ -76,10 +76,6 @@ Where:
 # Step5: Plot 2: Noise Comparison (Epoch-to-Epoch Differences)
 # Step6: Plot 3: Code Minus Phase (C - Φ)
 =============================================================================
-"""
-
-pip install --upgrade georinex
-
 # ──────────────────────────────────────────────────────────
 # Step 1 — Install & Import Libraries
 # ──────────────────────────────────────────────────────────
