@@ -1,10 +1,10 @@
-# 📐 Project 4 — Pseudorange vs Carrier-Phase Comparison
+# Project 4 — Pseudorange vs Carrier-Phase Comparison
 
 > **Code Noise · Phase Precision · Integer Ambiguity · Ionospheric Signature | GPS | Auckland, NZ**
 
 ---
 
-## 📌 Overview
+## Overview
 
 Every GNSS receiver produces two fundamentally different measurements at every epoch.
 This project compares them directly for a GPS satellite over 24 hours:
@@ -16,7 +16,7 @@ This project compares them directly for a GPS satellite over 24 hours:
 
 ---
 
-## 📐 The Mathematics
+## The Mathematics
 
 ### Pseudorange:
 ```
@@ -39,7 +39,7 @@ over time. Slow variations reveal ionospheric delay. Sudden jumps are cycle slip
 
 ---
 
-## 🖼️ Output Plots
+## Output Plots
 
 ### Plot 1 — Raw Measurements Overlaid
 
@@ -62,7 +62,7 @@ Differences between consecutive 30-second epochs:
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 project4-pseudorange-vs-carrier-phase/
@@ -79,7 +79,7 @@ project4-pseudorange-vs-carrier-phase/
 
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 ### 1. Install dependencies
 
@@ -113,7 +113,7 @@ jupyter notebook project4_pseudorange_vs_carrier_phase.ipynb
 
 ---
 
-## 🛠️ Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -125,7 +125,7 @@ jupyter notebook project4_pseudorange_vs_carrier_phase.ipynb
 
 ---
 
-## 🧭 Observables Used
+## Observables Used
 
 | Code | Description |
 |------|-------------|
@@ -143,7 +143,7 @@ LAM_L1 = C / F1          # L1 wavelength ≈ 0.1903 m  (≈ 19 cm)
 
 ---
 
-## 💡 Why Does This Matter?
+## Why Does This Matter?
 
 Understanding the pseudorange vs carrier-phase trade-off is at the core of GNSS engineering:
 
@@ -154,7 +154,7 @@ Understanding the pseudorange vs carrier-phase trade-off is at the core of GNSS 
 
 ---
 
-## 👤 Author
+## Author
 
 **Hakim El Azzouzi**  
 MSc Global Navigation Satellite Systems  
@@ -165,13 +165,13 @@ Mohammed First University, Oujda, Morocco
 
 ---
 
-## 📜 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 Part of the GNSS RINEX Analysis Series
+## Part of the GNSS RINEX Analysis Series
 
 | # | Project |
 |---|---------|
