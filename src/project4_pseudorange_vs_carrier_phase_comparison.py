@@ -1,12 +1,6 @@
 =============================================================================
-🛰️ Project 4 — Pseudorange vs Carrier-Phase Comparison
+Project 4 — Pseudorange vs Carrier-Phase Comparison
 =============================================================================
- Author   : Hakim El Azzouzi
- Degree   : MSc Global Navigation Satellite Systems
-            Mohammed First University, Oujda, Morocco
- Email    : elazzouzihakim10@gmail.com
- LinkedIn : https://linkedin.com/in/Hakim-El-Azzouzi
- Location : Luxembourg 🇱🇺
 -----------------------------------------------------------------------------
  Station  : AUCK00NZL  —  Auckland, New Zealand  (GeoNet / LINZ Network)
  File     : AUCK00NZL_R_20260010000_01D_30S_MO.rnx
@@ -26,13 +20,13 @@ Every GNSS receiver produces **two fundamentally different range measurements** 
 
 This project compares them directly for a GPS satellite over 24 hours, using 3 plots:
 
-1. 📡 **Raw measurements overlaid** — pseudorange and carrier-phase on the same scale
-2. 📉 **Noise comparison** — epoch-to-epoch differences (code noise vs phase noise)
-3. 🔢 **Code minus phase (C - Φ)** — the difference reveals the integer ambiguity + ionospheric delay
+1. **Raw measurements overlaid** — pseudorange and carrier-phase on the same scale
+2. **Noise comparison** — epoch-to-epoch differences (code noise vs phase noise)
+3. **Code minus phase (C - Φ)** — the difference reveals the integer ambiguity + ionospheric delay
 
 ---
 
-## 📐 The Mathematics
+## The Mathematics
 
 ### Pseudorange equation:
 ```
@@ -109,7 +103,7 @@ print(f'   xarray version   : {xr.__version__}')
 # RINEX FILE PATH HERE
 obs_path = "/AUCK00NZL_R_20260010000_01D_30S_MO.rnx"  # ← change this path
 # Read the file header first (fast — no data loaded yet)
-print("📋 FILE HEADER")
+print("FILE HEADER")
 print("=" * 60)
 header = gr.rinexheader(obs_path)
 
@@ -120,7 +114,7 @@ print()
 
 # Load all observation data (interval=30 means keep 30-sec rate)
 
-print("⏳ Loading observation data (this may take 1–2 minutes)...")
+print("Loading observation data (this may take 1–2 minutes)...")
 obs = gr.load(obs_path, interval=30)
 print()
 print("✅ Data loaded!")
@@ -193,7 +187,7 @@ print()
 print(f"LAM_L1 = {LAM_L1:.15f} m  ≈  {LAM_L1*100:.4f} cm")
 print(f"LAM_L2 = {LAM_L2:.15f} m  ≈  {LAM_L2*100:.4f} cm")
 print()
-print(f"📊 Observable statistics for {SAT}:")
+print(f"   Observable statistics for {SAT}:")
 print(f"   Common epochs (C1C ∩ L1C) : {len(common)}")
 print()
 print(f"   Pseudorange  C1C  min: {pr.min()/1e6:.3f} Mm   max: {pr.max()/1e6:.3f} Mm")
@@ -205,7 +199,7 @@ print(f"     Std   : {code_minus_phase.std():.3f} m    ← reflects code noise +
 print(f"     Min   : {code_minus_phase.min():,.3f} m")
 print(f"     Max   : {code_minus_phase.max():,.3f} m")
 print()
-print(f"💡 The mean of (P − Φ) ≈ 2·I + λ·N")
+print(f"   The mean of (P − Φ) ≈ 2·I + λ·N")
 print(f"   We cannot separate I and N without a second frequency.")
 print(f"   But changes in (P − Φ) over time ≈ ionospheric variation (2·ΔI).")
 
@@ -297,7 +291,7 @@ plt.show()
 
 print('✅ Plot saved: plot1_pseudorange_vs_carrier_phase.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Both curves trace the same orbital arc — same satellite, same geometry')
 print('   • Carrier phase appears smoother (nearly invisible noise at this scale)')
 print('   • Pseudorange has visible scatter (~1–3 m noise level)')
@@ -399,7 +393,7 @@ plt.show()
 
 print('✅ Plot saved: plot2_noise_comparison.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print(f'   • Y-axis SCALES ARE DIFFERENT: code is in metres, phase is in centimetres')
 print(f'   • Code noise  σ ≈ {pr_noise_std:.2f} m    → typical for pseudorange')
 print(f'   • Phase noise σ ≈ {cp_noise_std*100:.2f} cm  → millimetre-level precision')
@@ -508,7 +502,7 @@ plt.show()
 
 print('✅ Plot saved: plot3_code_minus_phase.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Top panel   : raw P − Φ — the flat level ≈ λ·N (ambiguity, cannot be removed here)')
 print('   • Bottom panel: after removing mean — slow variation ≈ 2·ΔI (ionospheric delay)')
 print(f'   • Mean (P − Φ) = {cmp_mean:.2f} m  ≈  {n_cycles_approx:.0f} L1 wavelengths')
