@@ -71,13 +71,13 @@ project4-pseudorange-vs-carrier-phase/
 │   ├── plot2_noise_comparison.png
 │   └── plot3_code_minus_phase.png
 ├── src/
-│   ├── config.py            ← constants, colours, OBS_PATH, SAT setting
-│   ├── rinex_loader.py      ← loads GPS-only RINEX
-│   ├── satellite_selection.py ← auto-picks best GPS sat (most C1C + has L2W)
-│   ├── observables.py       ← extracts pr/cp_L1/cp_L2, computes CMP and noise
-│   ├── reporting.py         ← all console print functions
-│   ├── visualization.py     ← plot1, plot2, plot3
-│   └── main.py              ← orchestrates the pipeline
+│   ├── config.py            
+│   ├── rinex_loader.py      
+│   ├── satellite_selection.py 
+│   ├── observables.py       
+│   ├── reporting.py         
+│   ├── visualization.py     
+│   └── main.py              
 ├── requirements.txt                                          ← Python dependencies
 ├── LICENSE                                                   ← MIT License
 └── README.md                                                 ← This file
