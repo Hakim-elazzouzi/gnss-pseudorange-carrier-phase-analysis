@@ -3,7 +3,7 @@
 # Pseudorange vs Carrier-Phase Comparison
 # ─────────────────────────────────────────────────────────────
 
-OBS_PATH = "/mnt/user-data/uploads/AUCK00NZL_R_20260010000_01D_30S_MO.rnx"
+OBS_PATH = "/AUCK00NZL_R_20260010000_01D_30S_MO.rnx"
 
 # ── Physical constants ────────────────────────────────────────
 C     = 299_792_458.0   # speed of light [m/s] — exact, by definition
